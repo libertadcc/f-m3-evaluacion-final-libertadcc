@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 class List extends React.Component{
   render(){
@@ -26,5 +27,9 @@ class List extends React.Component{
       </div>   
     );
   }
+}
+List.defaultProps={
+  filterInput: PropTypes.string,
+  characters: PropTypes.array
 }
 export default List;

@@ -1,8 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 class Detail extends React.Component{
-  
   componentWillUnmount(){
     this.setState({
       filterInput: ''
@@ -35,5 +35,9 @@ class Detail extends React.Component{
     );
   }
 }
-
+Detail.defaultProps={
+  characters: PropTypes.array,
+  characterId: PropTypes.number,
+  selected: PropTypes.obj
+}
 export default Detail;

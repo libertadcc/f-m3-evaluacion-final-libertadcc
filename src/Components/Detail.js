@@ -2,6 +2,12 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 class Detail extends React.Component{
+  
+  componentWillUnmount(){
+    this.setState({
+      filterInput: ''
+    })
+  }
   render(){
     const {characters} =this.props;
     const characterId = parseInt(this.props.parameters.match.params.child);

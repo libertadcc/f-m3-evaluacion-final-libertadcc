@@ -1,5 +1,5 @@
 import React from 'react';
-import './scss/main.scss';
+import './scss/App.scss';
 import {fetchCharacters} from './services/fetchCharacters';
 import Filter from './Components/Filter';
 import List from './Components/List';
@@ -61,7 +61,7 @@ class App extends React.Component{
             <Detail 
             parameters={parameters}
             characters={characters} />
-          } />
+          }/>
         </Switch>
       </div>
     );

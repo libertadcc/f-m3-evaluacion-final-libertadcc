@@ -1,0 +1,31 @@
+.detail{
+  border: 2px solid black;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10%;
+  background: blue;
+}
+
+.detail__img{
+  width: 280px;
+  @media all and (min-width: 768px){
+    width: 400px;
+  }
+}
+
+.detail__name{
+  font-size: 40px;
+}
+.detail__info{
+  font-size: 30px;
+}
+
+.btn__back{
+  margin-top: 10px;
+  border-radius: 6px;
+  font-size: 24px;
+  height: 45px;
+  width: 90px;
+  background: pink;
+  cursor: pointer;
+}

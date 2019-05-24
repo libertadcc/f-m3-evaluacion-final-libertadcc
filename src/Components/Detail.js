@@ -1,4 +1,5 @@
 import React from 'react';
+import '../scss/Detail.scss';
 import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
 

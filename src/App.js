@@ -1,8 +1,9 @@
 import React from 'react';
 import './scss/main.scss';
 import {fetchCharacters} from './services/fetchCharacters';
-import List from './Components/List';
 import Filter from './Components/Filter';
+import List from './Components/List';
+
 
 class App extends React.Component{
   constructor(props){
@@ -31,22 +32,23 @@ class App extends React.Component{
         })
       });
   }
+
   filterName(event){
     const filterName = event.currentTarget.value;
     this.setState({
       filterInput: filterName
     })    
   }
+
   render(){
     const {characters, filterInput} = this.state;
     return(
       <div className="page">
         <h1 className="title">Hogwarts School of Witchcraft and Wizardry</h1>
         <Filter 
-        characters={characters} 
-        filterInput={filterInput}
         action={this.filterName}/>
-        
+        <List characters={characters}
+        filterInput={filterInput} />
       </div>
     );
   }

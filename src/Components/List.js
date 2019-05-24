@@ -2,12 +2,12 @@ import React from 'react';
 
 class List extends React.Component{
   render(){
-    const {characters, filterInput} = this.props;
+    const {filterInput, characters} = this.props;
     return(
-      <div className="pannel">
+        <div className="pannel">
         <ul className="pannel__list">
         {characters
-        // filtross
+        .filter(obj => obj.name.includes(filterInput))
         .map(item =>{
           return(
             <li className="character" key={item.id}>
@@ -20,9 +20,8 @@ class List extends React.Component{
           );
         })}
         </ul>
-      </div>
+      </div>   
     );
   }
 }
-
 export default List;

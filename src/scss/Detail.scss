@@ -7,9 +7,10 @@
 }
 
 .detail__img{
+  border-radius: 10px;
   width: 280px;
   @media all and (min-width: 768px){
-    width: 400px;
+    width: 350px;
   }
 }
 
@@ -18,8 +19,14 @@
 }
 .detail__info{
   font-size: 30px;
+  text-transform: capitalize;
+  margin: 10px;
 }
-
+.detail__info--dob,
+.detail__info--house,
+.detail__info--surviver{
+  margin: 10px;
+}
 .btn__back{
   margin-top: 10px;
   border-radius: 6px;

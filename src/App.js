@@ -3,6 +3,8 @@ import './scss/main.scss';
 import {fetchCharacters} from './services/fetchCharacters';
 import Filter from './Components/Filter';
 import List from './Components/List';
+import Detail from './Components/Detail';
+import {Switch, Route} from 'react-router-dom';
 
 
 class App extends React.Component{
@@ -45,10 +47,22 @@ class App extends React.Component{
     return(
       <div className="page">
         <h1 className="title">Hogwarts School of Witchcraft and Wizardry</h1>
-        <Filter 
-        action={this.filterName}/>
-        <List characters={characters}
-        filterInput={filterInput} />
+        <Switch>
+          <Route exact path="/" render={() => 
+            <React.Fragment>
+            <Filter 
+            action={this.filterName}/>
+            <List 
+            characters={characters}
+            filterInput={filterInput} />
+            </React.Fragment>
+          }/>
+          <Route path="/detail/:child" render={(parameters) =>
+            <Detail 
+            parameters={parameters}
+            characters={characters} />
+          } />
+        </Switch>
       </div>
     );
   }

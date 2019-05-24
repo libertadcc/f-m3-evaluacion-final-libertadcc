@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 class List extends React.Component{
   render(){
@@ -10,6 +11,7 @@ class List extends React.Component{
         .filter(obj => obj.name.includes(filterInput))
         .map(item =>{
           return(
+            <Link to={`/detail/${item.id}`}>
             <li className="character" key={item.id}>
               <div className="card">
                 <img className="card__img" src={item.image} alt={`Imagen de ${item.name}`}/>
@@ -17,6 +19,7 @@ class List extends React.Component{
                 <h3 className="card__house">{item.house}</h3>
               </div>
             </li>
+            </Link>
           );
         })}
         </ul>

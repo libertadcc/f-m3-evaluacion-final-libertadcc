@@ -11,15 +11,15 @@ class List extends React.Component{
         .filter(obj => obj.name.includes(filterInput))
         .map(item =>{
           return(
-            <Link to={`/detail/${item.id}`}>
             <li className="character" key={item.id}>
+              <Link to={`/detail/${item.id}`}>
               <div className="card">
                 <img className="card__img" src={item.image} alt={`Imagen de ${item.name}`}/>
                 <h2 className="card__name">{item.name}</h2>
                 <h3 className="card__house">{item.house}</h3>
               </div>
+              </Link>
             </li>
-            </Link>
           );
         })}
         </ul>

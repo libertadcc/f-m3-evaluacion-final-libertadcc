@@ -16,10 +16,17 @@ class App extends React.Component{
     })
     this.getCharacters=this.getCharacters.bind(this);
     this.filterName=this.filterName.bind(this);
+    this.reset=this.reset.bind(this);
   }
 
   componentDidMount(){
     this.getCharacters();
+  }
+
+  reset(){
+    this.setState({
+      filterInput: ''
+    })
   }
 
   getCharacters(){
@@ -59,7 +66,8 @@ class App extends React.Component{
           <Route path="/detail/:child" render={(parameters) =>
             <Detail 
             parameters={parameters}
-            characters={characters} />
+            characters={characters} 
+            reset={this.reset}/>
           }/>
         </Switch>
       </div>

@@ -6,6 +6,7 @@
   width: 100vw;
   height: 100vh;
 }
+
 .wrapper__detail{
   margin-top: 15px;
   margin-bottom: 10px;
@@ -70,6 +71,12 @@
   font-size: 24px;
   height: 40px;
   width: 95px;
-  background: pink;
+  background: #d5d1b6;
   cursor: pointer;
+  border: 2px solid #3d6b41;
+  &:hover{
+    border: 2px solid #d5d1b6;
+    background: #3d6b41;
+    color: #d5d1b6;
+  }
 }

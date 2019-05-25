@@ -7,10 +7,9 @@ import Header from './Header';
 
 class Detail extends React.Component{
   componentWillUnmount(){
-    this.setState({
-      filterInput: ''
-    })
+    this.props.reset();
   }
+
   render(){
     const {characters} =this.props;
     const characterId = parseInt(this.props.parameters.match.params.child);
@@ -32,7 +31,7 @@ class Detail extends React.Component{
                 'Sin casa'} </h3>
               <h3 className="detail__info--dob">Nacimiento:  {selected.yearOfBirth}</h3>
               <h3 className="detail__info--patronus"> 
-              {`${selected.patronus === '' ? 'Sin patronus' : 'Patronus: selected.patronus' }`}</h3>
+              {selected.patronus === '' ? 'Sin patronus' : `Patronus: ${selected.patronus}`}</h3>
               <h3 className="detail__info--surviver">Estado: {selected.alive 
               ? 'Vivo'
               : 'Muerto'}</h3>
@@ -45,7 +44,9 @@ class Detail extends React.Component{
       : <p>No has seleccionado ningún personaje</p>}
       
       <Link to="/">
-        <button className="btn__back">Volver</button>
+        <button className="btn__back">
+          Volver
+        </button>
       </Link>
       </div>
       </React.Fragment>

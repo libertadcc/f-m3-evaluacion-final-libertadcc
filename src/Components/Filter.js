@@ -11,7 +11,7 @@ class Filter extends React.Component{
       <input 
       className="input"
       type="text"
-      placeholder="Nombre personaje"
+      placeholder="Introduce el nombre del personaje"
       onChange={action}></input>
     </React.Fragment>
     );

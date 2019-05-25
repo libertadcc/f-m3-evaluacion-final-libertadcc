@@ -1,5 +1,7 @@
 .wrapper__card{
-  background-color: #0c1e6a;
+  background-image: url(https://cdn5.aprendizajeviajero.com/wp-content/uploads/2018/01/donde-se-filmo-hogwarts-759x500.jpg);
+  
+  background-size: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,13 +25,42 @@
   display: flex;
   max-width: 650px;
 }
+.detail-griffindor {
+  background:	#740001;
+  border: 3px solid #eeba30;
+}
+.detail-slytherin {
+  background: #2a623d;
+  border: 3px solid	#aaaaaa;
+}
+.detail-hufflepuff {
+  background: #ecb939;
+  border: 3px solid	#372e29;
+}
+.detail-ravenclaw {
+  background:	#222f5b;
+  border: 3px solid		#946b2d;
+
+}
+.detail--shield{
+  background: transparent;
+  background-repeat: no-repeat;
+  background-position: right; 
+  height: 130px;
+  width:100%;
+  display: flex;
+  justify-content: flex-end;
+  .shield{
+    width: 110px;
+    }
+}
 
 .detail__img{
   border-radius: 10px;
   width: auto;
   height: 400px;
   @media all and (min-width: 768px){
-    width: 350px;
+    max-width: 350px;
   }
 }
 .detail__info{
@@ -52,18 +83,8 @@
 .detail__info--surviver{
   margin: 10px;
 }
-.test{
-  display: flex;
-  justify-content: flex-end;
-  height: 70px;
-  position: relative;
-  bottom: 30px;
-  right: 10px;
-}
 
-.img{
-  width: 70px;
-}
+
 .btn__back{
   margin-top: 5px;
   margin-bottom: 5px;
@@ -71,12 +92,14 @@
   font-size: 24px;
   height: 40px;
   width: 95px;
-  background: #d5d1b6;
+  background: #002cbd;
   cursor: pointer;
-  border: 2px solid #3d6b41;
+  border: 2px solid #1c2146;
+  color: white;
   &:hover{
     border: 2px solid #d5d1b6;
     background: #f8f8c0;
-    color: #171513;
+    color: #1c2146;
+    transform: scale(1.1);
   }
 }

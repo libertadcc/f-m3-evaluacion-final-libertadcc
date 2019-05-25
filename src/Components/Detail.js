@@ -21,7 +21,11 @@ class Detail extends React.Component{
         <Header />
       {selected !== undefined ? 
         <div className="wrapper__detail">
-          <div className="detail">
+          <div className={`detail  detail-${selected.house === 'Gryffindor' ? 'griffindor' 
+          : selected.house === 'Slytherin' ? 'slytherin' 
+          : selected.house === 'Hufflepuff' ? 'hufflepuff' 
+          : selected.house === 'Ravenclaw' ? 'ravenclaw' : ''
+          }`}>
             <img className="detail__img" src={selected.image} alt={`Imagen de ${selected.name}`}/>
             <div className="detail__info">
               <h2 className="detail__name">{selected.name}</h2>
@@ -32,12 +36,19 @@ class Detail extends React.Component{
               <h3 className="detail__info--dob">Nacimiento:  {selected.yearOfBirth}</h3>
               <h3 className="detail__info--patronus"> 
               {selected.patronus === '' ? 'Sin patronus' : `Patronus: ${selected.patronus}`}</h3>
-              <h3 className="detail__info--surviver">Estado: {selected.alive 
-              ? 'Vivo'
-              : 'Muerto'}</h3>
-              {/* <div className="test">
-                <img className="img" src={`${selected.house === 'Gryffindor' ? 'https://media.mykaramelli.com/galeria/articulos/decoracion-de-pared-emblema-gryffindor-harry-potter-61cm_12422_1.jpg' : 'https://static.fnac-static.com/multimedia/Images/ES/NR/45/bb/42/4373317/1540-1.jpg'}`}>
-                </img> </div> */}
+              <h3 className="detail__info--surviver">Estado: {selected.alive && selected.gender === 'female'
+              ? 'Viva' : selected.alive && selected.gender === 'male' ? 'Vivo'
+              : selected.alive === false && selected.gender === 'female' ?
+              'Muerta' : 'Muerto'}</h3>
+              <div className="detail--shield"
+              >
+                <img className="shield" alt="Escudo de la casa"
+                src={selected.house === 'Gryffindor' ? 'https://vignette.wikia.nocookie.net/es.harrypotter/images/a/a3/Gryffindor_Pottermore.png/revision/latest?cb=20140922195249' 
+                : selected.house === 'Slytherin' ? 'https://vignette.wikia.nocookie.net/es.harrypotter/images/6/69/Slytherin_Pottermore.png/revision/latest?cb=20141001130915' 
+                : selected.house === 'Hufflepuff' ? 'https://vignette.wikia.nocookie.net/es.harrypotter/images/4/42/Hufflepuff_Pottermore.png/revision/latest?cb=20141001131135' 
+                : selected.house === 'Ravenclaw' ? 'https://vignette.wikia.nocookie.net/es.harrypotter/images/7/76/Ravenclaw_Pottermore.png/revision/latest?cb=20141001130914' : ''
+                }/>
+              </div>
             </div>
           </div>
         </div>

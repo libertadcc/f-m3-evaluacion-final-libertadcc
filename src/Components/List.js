@@ -10,7 +10,7 @@ class List extends React.Component{
         <div className="pannel">
         <ul className="pannel__list">
         {characters
-        .filter(obj => obj.name.includes(filterInput))
+        .filter(obj => obj.name.toLowerCase().includes(filterInput))
         .map(item =>{
           return(
             <li className="character" key={item.id}>

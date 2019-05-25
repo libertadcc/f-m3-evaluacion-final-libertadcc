@@ -22,7 +22,7 @@ class Detail extends React.Component{
         <Header />
       {selected !== undefined ? 
         <div className="wrapper__detail">
-          <div className={`detail  detail-${selected.house === 'Gryffindor' ? 'griffindor' 
+          <div className={`detail  detail-${selected.house === 'Gryffindor' ? 'gryffindor' 
           : selected.house === 'Slytherin' ? 'slytherin' 
           : selected.house === 'Hufflepuff' ? 'hufflepuff' 
           : selected.house === 'Ravenclaw' ? 'ravenclaw' : ''

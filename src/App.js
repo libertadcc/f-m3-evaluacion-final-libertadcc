@@ -45,7 +45,7 @@ class App extends React.Component{
   filterName(event){
     const filterName = event.currentTarget.value;
     this.setState({
-      filterInput: filterName
+      filterInput: filterName.toLowerCase()
     })    
   }
 

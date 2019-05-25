@@ -1,10 +1,10 @@
 .wrapper__card{
-  background-color: #a1b178;
+  background-color: #0c1e6a;
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .wrapper__detail{
@@ -76,7 +76,7 @@
   border: 2px solid #3d6b41;
   &:hover{
     border: 2px solid #d5d1b6;
-    background: #3d6b41;
-    color: #d5d1b6;
+    background: #f8f8c0;
+    color: #171513;
   }
 }

@@ -46,7 +46,6 @@ class App extends React.Component{
     const {characters, filterInput} = this.state;
     return(
       <div className="page">
-        <h1 className="title">Hogwarts School of Witchcraft and Wizardry</h1>
         <Switch>
           <Route exact path="/" render={() => 
             <React.Fragment>

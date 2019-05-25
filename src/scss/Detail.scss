@@ -1,38 +1,70 @@
+.wrapper__card{
+  background-color: orange;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+.wrapper__detail{
+  margin-top: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
 .detail{
   border: 2px solid black;
   padding: 20px;
   box-sizing: border-box;
   border-radius: 10%;
   background: blue;
+  display: flex;
+  max-width: 650px;
 }
 
 .detail__img{
   border-radius: 10px;
-  width: 280px;
+  width: auto;
+  height: 400px;
   @media all and (min-width: 768px){
     width: 350px;
   }
 }
+.detail__info{
+  font-size: 20px;
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  margin-left: 20px;
+}
 
 .detail__name{
-  font-size: 40px;
-}
-.detail__info{
   font-size: 30px;
-  text-transform: capitalize;
-  margin: 10px;
+  text-align: center;
 }
+
 .detail__info--dob,
 .detail__info--house,
+.detail__info--patronus,
 .detail__info--surviver{
   margin: 10px;
 }
+.test{
+  background: green}
+.img{
+
+  width: 40px;
+
+}
 .btn__back{
-  margin-top: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   border-radius: 6px;
   font-size: 24px;
-  height: 45px;
-  width: 90px;
+  height: 40px;
+  width: 95px;
   background: pink;
   cursor: pointer;
 }

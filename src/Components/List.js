@@ -20,7 +20,7 @@ class List extends React.Component{
                 <div className="card__info">
                   <h2 className="card__name">{item.name}</h2>
                   <h3 className="card__house">
-                    {item.house !== '' ? `House: ${item.house}` : 'No house'} </h3>
+                    {item.house !== '' ? `Casa: ${item.house}` : 'Sin casa'} </h3>
                 </div>
               </div>
               </Link>

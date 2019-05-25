@@ -10,12 +10,12 @@
   @media all and (min-width: 768px){
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
+    grid-gap: 10px;
   }
   @media all and (min-width: 1024px){
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 20px;
+    grid-gap: 10px;
   }
 }
 
@@ -26,7 +26,7 @@
 
 .card{
   text-decoration: none;
-  background: red;
+  background: #e6d690;
   border: 2px solid black;
   border-radius: 5px;
   margin: 20px;

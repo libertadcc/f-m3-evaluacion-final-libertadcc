@@ -30,15 +30,15 @@ class Detail extends React.Component{
               {selected.house !== '' ?
                `Casa: ${selected.house}` :
                 'Sin casa'} </h3>
-              <h3 className="detail__info--dob">Nacimiento:{selected.dateOfBirth}</h3>
+              <h3 className="detail__info--dob">Nacimiento:  {selected.yearOfBirth}</h3>
               <h3 className="detail__info--patronus"> 
-              {`${selected.patronus === '' ? 'Sin patronus' : 'Patronus: selected.patronus'}`}</h3>
+              {`${selected.patronus === '' ? 'Sin patronus' : 'Patronus: selected.patronus' }`}</h3>
               <h3 className="detail__info--surviver">Estado: {selected.alive 
               ? 'Vivo'
               : 'Muerto'}</h3>
-              <div className="test">
+              {/* <div className="test">
                 <img className="img" src={`${selected.house === 'Gryffindor' ? 'https://media.mykaramelli.com/galeria/articulos/decoracion-de-pared-emblema-gryffindor-harry-potter-61cm_12422_1.jpg' : 'https://static.fnac-static.com/multimedia/Images/ES/NR/45/bb/42/4373317/1540-1.jpg'}`}>
-                </img> </div>
+                </img> </div> */}
             </div>
           </div>
         </div>

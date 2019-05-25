@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import Header from './Header';
 
 
+
 class Detail extends React.Component{
   componentWillUnmount(){
     this.props.reset();

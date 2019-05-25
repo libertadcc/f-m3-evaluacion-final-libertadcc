@@ -3,6 +3,8 @@ import './scss/App.scss';
 import {fetchCharacters} from './services/fetchCharacters';
 import Filter from './Components/Filter';
 import List from './Components/List';
+import Header from './Components/Header';
+
 import Detail from './Components/Detail';
 import {Switch, Route} from 'react-router-dom';
 
@@ -56,6 +58,7 @@ class App extends React.Component{
         <Switch>
           <Route exact path="/" render={() => 
             <React.Fragment>
+            <Header />
             <Filter 
             action={this.filterName}/>
             <List 

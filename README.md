@@ -1,4 +1,4 @@
-# COLEGIO HOGWARTS DE MAGIA Y HECHICERÍA 
+# COLEGIO HOGWARTS DE MAGIA Y HECHICERÍA 🔮
 
 ¿Quieres saber más sobre los estudiantes y profesores del colegio de magia Hogwarts? 🧙
 ¡ Esta web solucionará todas tus dudas !

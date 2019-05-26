@@ -19,7 +19,8 @@ SASS - Preprocesador de estilos
 
 ## ⛩ Estructura
 Este proyecto tiene la siguiente organización de carpetas y componentes
-`Index.js
+```
+Index.js
   '
   ' - App.js
       ' - scss
@@ -35,5 +36,6 @@ Este proyecto tiene la siguiente organización de carpetas y componentes
           ' - Filter.js
           ' - List.js
           ' - Detail.js
+```
           
        

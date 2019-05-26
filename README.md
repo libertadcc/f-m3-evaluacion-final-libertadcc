@@ -14,8 +14,8 @@ Sigue estos pasos si quieres tener una copia del proyecto:
 3. ¡ Listo !
 
 ## 🛠 Construido con
-React - Framework de JavaScript
-SASS - Preprocesador de estilos
+- [React](https://reactjs.org/) - Framework de JavaScript
+- [SASS](https://sass-lang.com/) - Preprocesador de estilos
 
 ## ⛩ Estructura
 Este proyecto tiene la siguiente organización de carpetas y componentes

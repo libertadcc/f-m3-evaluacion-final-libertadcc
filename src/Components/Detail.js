@@ -4,8 +4,6 @@ import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Header from './Header';
 
-
-
 class Detail extends React.Component{
   componentWillUnmount(){
     this.props.reset();
@@ -15,7 +13,6 @@ class Detail extends React.Component{
     const {characters} =this.props;
     const characterId = parseInt(this.props.parameters.match.params.child);
     const selected = characters.find(obj => obj.id === characterId);
-
     return(
       <React.Fragment>
         <div className="wrapper__card">
@@ -65,9 +62,11 @@ class Detail extends React.Component{
     );
   }
 }
+
 Detail.defaultProps={
   characters: PropTypes.array,
   characterId: PropTypes.number,
   selected: PropTypes.obj
 }
+
 export default Detail;

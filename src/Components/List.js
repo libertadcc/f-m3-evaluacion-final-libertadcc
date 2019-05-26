@@ -15,6 +15,7 @@ class List extends React.Component{
           return(
             <li className="character" key={item.id}>
               <Link className="link" to={`/detail/${item.id}`}>
+                <span class="tooltiptext">Haz click para saber más</span>
               <div className="card">
                 <img className="card__img" src={item.image} alt={`Imagen de ${item.name}`}/>
                 <div className="card__info">

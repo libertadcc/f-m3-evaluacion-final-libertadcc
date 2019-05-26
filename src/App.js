@@ -37,7 +37,6 @@ class App extends React.Component{
         const newData = data.map((obj, index) =>{
           return {...obj, id: index}
         } )
-        console.log(newData);
         this.setState({
           characters: newData
         })

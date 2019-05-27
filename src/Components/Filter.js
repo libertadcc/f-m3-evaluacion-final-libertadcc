@@ -21,7 +21,7 @@ class Filter extends React.Component{
             <input
               id="todas"
               type="radio"
-              value=""
+              value=''
               name="houses"
               onChange={checkHouse}
               checked={checked === ''}

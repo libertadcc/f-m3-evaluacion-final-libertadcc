@@ -25,7 +25,19 @@
     grid-gap: 15px;
   }
 }
-
+.incorrect{
+  text-align: center;
+  color: black;
+  font-size: 26px;
+  font-weight: bold;
+  background-color: #e0e0e0;
+  @media all and(min-width: 1024px){
+    display: flex;
+    grid-column-start: 2;
+    align-items: center;
+    margin: 20px auto;
+  }
+}
 .link{
   text-decoration: none;
   color: black;

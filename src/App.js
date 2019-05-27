@@ -14,11 +14,13 @@ class App extends React.Component{
     super(props);
     this.state=({
       characters: [],
-      filterInput: ''
+      filterInput: '',
+      checked: ''
     })
     this.getCharacters=this.getCharacters.bind(this);
     this.filterName=this.filterName.bind(this);
     this.reset=this.reset.bind(this);
+    this.filterHouse=this.filterHouse.bind(this);
   }
 
   componentDidMount(){
@@ -50,8 +52,15 @@ class App extends React.Component{
     })    
   }
 
+  filterHouse(event){
+    const houseChecked = event.currentTarget.value;
+    this.setState({
+      checked: houseChecked
+    })
+  }
+  
   render(){
-    const {characters, filterInput} = this.state;
+    const {characters, filterInput, checked} = this.state;
     return(
       <div className="page">
         <Switch>
@@ -59,10 +68,13 @@ class App extends React.Component{
             <React.Fragment>
             <Header />
             <Filter 
-            action={this.filterName}/>
+            action={this.filterName}
+            checkHouse={this.filterHouse}
+            checked={checked}/>
             <List 
             characters={characters}
-            filterInput={filterInput} />
+            filterInput={filterInput} 
+            checked={checked}/>
             </React.Fragment>
           }/>
           <Route path="/detail/:child" render={(parameters) =>

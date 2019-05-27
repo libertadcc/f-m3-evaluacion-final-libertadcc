@@ -5,13 +5,14 @@ import PropTypes from 'prop-types';
 
 class List extends React.Component{
   render(){
-    const {filterInput, characters} = this.props;
+    const {filterInput, characters, checked} = this.props;
     return(
       <React.Fragment>
         <div className="shield___hogwarts"></div>
         <div className="pannel">
         <ul className="pannel__list">
         {characters
+        .filter(item => item.house.includes(checked))
         .filter(obj => obj.name.toLowerCase().includes(filterInput))
         .map(item =>{
           return(

@@ -37,7 +37,7 @@ class Detail extends React.Component{
               <h3 className="detail__info--surviver">Estado: {selected.alive && selected.gender === 'female'
               ? 'Viva' : selected.alive && selected.gender === 'male' ? 'Vivo'
               : selected.alive === false && selected.gender === 'female' ?
-              'Muerta' : 'Muerto'}</h3>
+              'Muerta 💀' : 'Muerto 💀'}</h3>
               <div className="detail--shield"
               >
                 <img className="shield" alt="Escudo de la casa"
@@ -50,7 +50,8 @@ class Detail extends React.Component{
             </div>
           </div>
         </div>
-      : <p>No has seleccionado ningún personaje</p>}
+      : <p className="error__message">
+        No has seleccionado ningún personaje</p>}
       
       <Link to="/">
         <button className="btn__back">

@@ -5,10 +5,17 @@
   url("https://db.onlinewebfonts.com/t/4834f12f4baeb6cccc0a01e0aa35d99a.woff") format("woff"),
   url("https://db.onlinewebfonts.com/t/4834f12f4baeb6cccc0a01e0aa35d99a.ttf") format("truetype"),
   url("https://db.onlinewebfonts.com/t/4834f12f4baeb6cccc0a01e0aa35d99a.svg#Parry Hotter") format("svg");
- }
+}
+
  .title{
   margin: 0px;
-  font-size: 60px;
+  font-size: 40px;
   padding-top: 15px;
   font-family: Parry Hotter;
+  @media all and (min-width: 768px) {
+    font-size: 50px;
+  }
+  @media all and (min-width: 1024px){
+    font-size: 60px;
+  }
 }

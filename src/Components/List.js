@@ -7,6 +7,8 @@ class List extends React.Component{
   render(){
     const {filterInput, characters} = this.props;
     return(
+      <React.Fragment>
+        <div className="shield___hogwarts"></div>
         <div className="pannel">
         <ul className="pannel__list">
         {characters
@@ -29,7 +31,8 @@ class List extends React.Component{
           );
         })}
         </ul>
-      </div>   
+        </div> 
+      </React.Fragment>  
     );
   }
 }

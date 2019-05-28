@@ -15,12 +15,14 @@ class App extends React.Component{
     this.state=({
       characters: [],
       filterInput: '',
+      filterEye: '',
       checked: ''
     })
     this.getCharacters=this.getCharacters.bind(this);
     this.filterName=this.filterName.bind(this);
     this.reset=this.reset.bind(this);
     this.filterHouse=this.filterHouse.bind(this);
+    this.filterColor=this.filterColor.bind(this);
   }
 
   componentDidMount(){
@@ -51,6 +53,12 @@ class App extends React.Component{
       filterInput: filterName.toLowerCase()
     })    
   }
+  filterColor(event){
+    const eyeColor = event.currentTarget.value;
+    this.setState({
+      filterEye: eyeColor.toLowerCase()
+    })
+  }
 
   filterHouse(event){
     const houseChecked = event.currentTarget.value;
@@ -60,7 +68,7 @@ class App extends React.Component{
   }
   
   render(){
-    const {characters, filterInput, checked} = this.state;
+    const {characters, filterInput, checked, filterEye} = this.state;
     return(
       <div className="page">
         <Switch>
@@ -69,11 +77,14 @@ class App extends React.Component{
             <Header />
             <Filter 
             action={this.filterName}
+            filterColor={this.filterColor}
             checkHouse={this.filterHouse}
-            checked={checked}/>
+            checked={checked}
+            />
             <List 
             characters={characters}
             filterInput={filterInput} 
+            filterEye={filterEye}
             checked={checked}/>
             </React.Fragment>
           }/>

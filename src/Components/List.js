@@ -5,9 +5,10 @@ import PropTypes from 'prop-types';
 
 class List extends React.Component{
   render(){
-    const {filterInput, characters, checked} = this.props;
+    const {filterInput, characters, checked, filterEye} = this.props;
     const array = characters
     .filter(item => item.house.includes(checked))
+    .filter(item => item.eyeColour.toLowerCase().includes(filterEye))
     .filter(obj => obj.name.toLowerCase().includes(filterInput))
     .map(item =>{
       return(

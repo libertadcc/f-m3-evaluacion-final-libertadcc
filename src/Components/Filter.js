@@ -3,7 +3,7 @@ import '../scss/Filter.scss';
 
 class Filter extends React.Component{
   render(){
-    const {action, checked, checkHouse} = this.props;
+    const {action, checked, checkHouse, filterColor} = this.props;
     return(
     <React.Fragment>
       <div className="filters">
@@ -13,6 +13,13 @@ class Filter extends React.Component{
         placeholder="Introduce el nombre del personaje"
         onChange={action}>
         </input>
+      </div>
+      <div className="eye">
+        <input 
+        type="text"
+        placeholder="Color de ojos"
+        onChange={filterColor}
+        />
       </div>
       <div className="filter__houses">
       <p className="filter__houses-name">Selecciona la casa</p>
